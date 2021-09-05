@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Calculadora de Juros Composto</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+       input[type=number]::-webk
+       it-inner-spin-button,
+       input[type=number]::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+        body{
+                background-color: #f0f0f0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        header{
+                background-color: #198754;
+                padding: 10px;
+                text-align: center;
+            }
+        .container{
+              width: 800px;
+              max-width: 100%;
+              margin: 0 auto;
+        }
+    </style>
+  </head>
+    <header>
+        <div class="container-fluid">
+            <img src="https://image.flaticon.com/icons/png/512/2856/2856818.png" alt="" height="60" width="60">
+        </div>
+    </header>
+  </body>
+  <body>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+          <h1 style="text-align:center" class="text-success">Calculadora de Juros Composto</h1>
+        <div class="col-4">
+          <form class="form-juros">
+            <div class="mb-3">
+              <label for="nome" class="form-label" >Nome:</label>
+              <input type="text" class="form-control" id="name" name="nome" min="0" max="10" placeholder="Informe o seu nome" aria-describedby="Preencha Nome">
+            </div>
+            <div class="mb-3">
+              <label for="capital" class="form-label">Mensalidade:</label>
+              <input type="number" class="form-control" id="capital" name="mensalidade" min="0" max="9999" placeholder="Valor Mensal" aria-describedby="Preencha a Mensalidade">
+            </div>
+            <div class="mb-3">
+              <label for="taxa" class="form-label">Taxa de  Juros:</label>
+              <input type="number" class="form-control" id="taxa" name="taxa" placeholder="Taxa Mensal" aria-describedby="Preencha a Taxa de Juros">
+            </div>
+            <div class="mb-3">
+              <label for="anos" class="form-label">Tempo de Contribuição:</label>
+              <input type="number" class="form-control" id="anos" name="anos" placeholder="Contribuição Anual" aria-describedby="Preencha o Tempo de Contribuição">
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-success" onclick="calcular_juros()">Calcular</button>
+            </div>
+  
+            </form>
+            <div class="text-center show-result d-none">
+              <p class="result-materia1">...</p>
+              <br>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success" onclick="voltar()">Calcular novamente</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <script type="text/javascript" src="calcular_juros.js"></script>
+  </body>
+</html>
